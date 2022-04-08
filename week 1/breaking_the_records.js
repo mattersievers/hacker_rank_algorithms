@@ -1,3 +1,10 @@
+/* Maria plays college basketball and wants to go pro. Each season she maintains a record of her play. 
+She tabulates the number of times she breaks her season record for most points and least points in a game. 
+Points scored in the first game establish her record for the season, and she begins counting from there.
+Function inputs an array of integers representing scores and outputs an array with the numbers of times she broke her records.
+Index 0 is for breaking most points records, and index 1 is for breaking least points records.
+*/
+
 function breakingRecords(scores) {
     // Write your code here
     console.log(scores);
