@@ -7,10 +7,13 @@
   * [Questions](#questions)
 
   ## Description
-    The algorithms within this repo are from the HackerRank website 3 Months Preparation Kit for coding interviews. Each individual JavaScript file contains comments detailing the purpose of the function.
+    The algorithms within this repo are from the HackerRank website 3 Months Preparation Kit for coding 
+    interviews. Each individual JavaScript file contains comments detailing the purpose of the function.
 
   ## Install
-    Ensure you have a current working version of Node.js. Download and unzip the files from this repo and use Node.js commands to run the individual javascript files. Users should be able to see select test cases run within the console.
+    Ensure you have a current working version of Node.js. Download and unzip the files from this repo 
+    and use Node.js commands to run the individual javascript files. Users should be able to see select 
+    test cases run within the console.
   
 
   ## Contributing
