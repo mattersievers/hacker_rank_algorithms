@@ -9,28 +9,17 @@ best possible way so that the sum of the elements in the matrix's upper-left qua
 * The function accepts 2D_INTEGER_ARRAY matrix as parameter.
 */
 function flippingMatrix(matrix) { 
+    
     let n = matrix.length; 
-    let sum = 0, sumTop = 0, sumBottom = 0;
+    let sum = 0;
     //sum n x n matrix
     for(let i=0; i < n/2; i++){ 
-        let largerRowTop =0, largerRowBottom = 0, sumTopLeft = 0, sumTopRight = 0, sumBottomRight = 0, sumBottomLeft = 0;
 
         for(let j=0; j < n/2; j++){ 
-            sumTopLeft += matrix[i][j]; 
-            sumTopRight += matrix[i][n-1-j];
+            sum += Math.max(matrix[i][j], matrix[i][n-1-j], matrix[n-1-i][j], matrix[n-1-i][n-1-j]);
         }
-        largerRowTop = Math.max(sumTopLeft,sumTopRight);
-        sumTop += largerRowTop;
-
-        for(let j=0; j < n/2; j++ ){ 
-            sumBottomLeft += matrix[n-1-i][j];
-            sumBottomRight += matrix[n-1-i][n-1-j]; 
-        }
-        largerRowBottom = Math.max(sumBottomLeft,sumBottomRight);
-        sumBottom += largerRowBottom;
     }
-    sum = Math.max(sumTop, sumBottom)
-return sum;
+    return sum;
 }    
 
 const A = [[1,2,3,4],[8,7,6,5],[9,10,11,12],[16,15,14,13]];
