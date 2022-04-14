@@ -12,6 +12,11 @@
 
 //     return res;
 // }
+
+
+
+
+
 #include <cmath>
 #include <cstdio>
 #include <vector>
@@ -44,4 +49,3 @@ int main() {
     cout << "Resulting xor string: " << strings_xor(s, t) << endl;
     return 0;
 }
-
