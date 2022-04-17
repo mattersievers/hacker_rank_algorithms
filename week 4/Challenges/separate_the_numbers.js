@@ -17,22 +17,24 @@ function separateNumbers(s) {
     let currentLength = 1;
     let start = ""
     for(let i=0; i < s.length - currentLength; i++){
-        let firstNumber = parseInt(s.slice(i,i+currentLength));
-        let secondNumber = String(firstNumber + 1);
-        let secondCheck = s.slice(i+currentLength, i+currentLength+secondNumber.length)
-        
+        let firstNumber = BigInt(s.slice(i,i+currentLength));
+        let secondNumber = (firstNumber + 1n).toString();
+
+        let secondCheck = s.slice(i+currentLength, i+currentLength+secondNumber.length);
+
         if(secondCheck === secondNumber){
             if(i===0){start = String(firstNumber)}
             i = i + currentLength - 1;
             currentLength = secondNumber.length;
             beautiful = true;
         }
-        else {beautiful = false; currentLength++; i--}
+        else {beautiful = false; currentLength++; i=-1}
         
     }
     
     beautiful? console.log("YES", start) : console.log("NO");
 }
+
 
 console.log("Sample Test Case 0: \n");
 separateNumbers('1234');
@@ -48,3 +50,15 @@ separateNumbers("99910001001");
 separateNumbers("7891011");
 separateNumbers("9899100");
 separateNumbers("999100010001");
+
+console.log("Sample Test Cast 10: \n");
+separateNumbers("90071992547409929007199254740993");
+separateNumbers("45035996273704964503599627370497");
+separateNumbers("22517998136852482251799813685249");
+separateNumbers("11258999068426241125899906842625");
+separateNumbers("562949953421312562949953421313");
+separateNumbers("90071992547409928007199254740993");
+separateNumbers("45035996273704963503599627370497");
+separateNumbers("22517998136852481251799813685249");
+separateNumbers("11258999068426240125899906842625");
+separateNumbers("562949953421312462949953421313");
